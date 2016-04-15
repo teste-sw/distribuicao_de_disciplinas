@@ -2,19 +2,22 @@ package br.edu.ifrn.suap.academico.entidades;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
 import org.junit.Test;
 
 public class DistribuicaoTest {
 
-	@Test
+	@Test(expected=NullPointerException.class)
 	public void testDistribuir() {
-		Object periodo = null;
-		Object curso = null;
-		Object disciplina = null;
-		Object professores = null;
+		Periodo periodo = new Periodo();
+		Curso curso = null;
+		Disciplina disciplina = null;
+		Collection<Professor> professores = new ArrayList<Professor>();
 		
 		Distribuicao.distribuir(periodo, curso, disciplina, professores);
-		fail("Not yet implemented");
 	}
 
 }
