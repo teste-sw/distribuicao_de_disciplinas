@@ -4,10 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
-
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class DistribuicaoTest {
@@ -20,7 +17,7 @@ public class DistribuicaoTest {
 
 	@Before
 	public void setup() {
-		periodo = new Periodo();
+		periodo = Periodo.abrirNovoPeriodo();
 		curso = new Curso();
 		disciplina = new Disciplina();
 		professores = new ArrayList<Professor>();
