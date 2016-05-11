@@ -1,7 +1,6 @@
 package br.edu.ifrn.suap.academico.entidades;
 
 import java.util.Collection;
-import java.util.Iterator;
 
 public class Distribuicao {
 	

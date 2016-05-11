@@ -19,7 +19,7 @@ public class DistribuicaoTest {
 	public void setup() {
 		periodo = Periodo.abrirNovoPeriodo();
 		curso = new Curso();
-		disciplina = new Disciplina();
+		disciplina = new Disciplina("", "", 0);
 		professores = new ArrayList<Professor>();
 		professores.add(new Professor());
 
