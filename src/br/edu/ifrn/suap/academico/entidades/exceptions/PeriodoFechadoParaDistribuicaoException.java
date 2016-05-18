@@ -1,4 +1,6 @@
-package br.edu.ifrn.suap.academico.entidades;
+package br.edu.ifrn.suap.academico.entidades.exceptions;
+
+import br.edu.ifrn.suap.academico.entidades.Periodo;
 
 public class PeriodoFechadoParaDistribuicaoException extends Exception {
 

@@ -1,6 +1,11 @@
 package br.edu.ifrn.suap.academico.entidades;
 
 public class Professor {
+	
+	private String nome;
+	private String matricula;
+	private String email;
+	private JornadaDeTrabalho jornada; 
 
 	public CargaHoraria calcularCHDistribuida(Periodo periodo) {
 		

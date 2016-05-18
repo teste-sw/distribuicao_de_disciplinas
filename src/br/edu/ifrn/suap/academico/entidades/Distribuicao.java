@@ -1,10 +1,18 @@
 package br.edu.ifrn.suap.academico.entidades;
 
 import java.util.Collection;
+import java.util.HashMap;
+
+import br.edu.ifrn.suap.academico.entidades.exceptions.CursoSemPeriodoException;
+import br.edu.ifrn.suap.academico.entidades.exceptions.DisciplinaSemCursoException;
 
 public class Distribuicao {
 	
+	private HashMap<Curso, DistribuicaoDisciplina> disciplinas;
+	
 	public Periodo periodo;
+	
+	// FIXME esses atributos devem ser movidos para DistribuicaoDisciplina
 	public Curso curso;
 	public Disciplina disciplina;
 	public Collection<Professor> professores;

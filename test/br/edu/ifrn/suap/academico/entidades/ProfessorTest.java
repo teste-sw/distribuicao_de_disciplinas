@@ -2,6 +2,11 @@ package br.edu.ifrn.suap.academico.entidades;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import br.edu.ifrn.suap.academico.entidades.exceptions.CursoSemPeriodoException;
+import br.edu.ifrn.suap.academico.entidades.exceptions.DisciplinaSemCursoException;
+import br.edu.ifrn.suap.academico.entidades.exceptions.PeriodoFechadoParaDistribuicaoException;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;

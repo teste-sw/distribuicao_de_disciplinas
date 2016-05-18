@@ -7,6 +7,9 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.edu.ifrn.suap.academico.entidades.exceptions.CursoSemPeriodoException;
+import br.edu.ifrn.suap.academico.entidades.exceptions.DisciplinaSemCursoException;
+
 public class DistribuicaoTest {
 
 	Periodo periodo;
