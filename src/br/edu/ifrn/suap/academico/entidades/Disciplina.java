@@ -8,7 +8,7 @@ public class Disciplina {
 		this.ch = new CargaHoraria(ch);
 	}
 
-	// FIXME no novo modelo, essa propriedade deverá ser removida
+	// FIXME no novo modelo, essa propriedade deverá ser removida porque uma disciplina pode estar em diversos cursos
 	public Object curso;
 	
 	public final String codigo;

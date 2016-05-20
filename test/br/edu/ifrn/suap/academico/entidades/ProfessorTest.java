@@ -36,7 +36,10 @@ public class ProfessorTest {
 		assertEquals(CHEsperada, CHComputada);
 		Collection<Professor> professores = new ArrayList<Professor>();
 		professores.add(this.professor);
-		Curso curso = new Curso();
+		Curso curso = new Curso("01404", 
+				"Tecnologia em Análise e Desenvolvimento de Sistemas", 
+				CursoNivel.Graduacao);
+		
 		// FIXME concluir o teste do retorno do método professor.calcularCHDistribuida
 		Disciplina disciplina = new Disciplina("","",0);
 //		disciplina.setCargaHoraria(14);

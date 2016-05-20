@@ -22,6 +22,8 @@ public class Distribuicao {
 		this.curso = curso;
 		this.disciplina = disciplina;
 		this.professores = professores;
+		
+		this.disciplinas = new HashMap<Curso, DistribuicaoDisciplina>();
 	}
 
 	public static Distribuicao distribuir(Periodo periodo, Curso curso,
