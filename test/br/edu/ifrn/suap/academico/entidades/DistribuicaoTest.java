@@ -20,13 +20,13 @@ public class DistribuicaoTest {
 
 	@Before
 	public void setup() {
-		periodo = Periodo.abrirNovoPeriodo();
-		curso = new Curso("01404", 
+		this.periodo = Periodo.abrirNovoPeriodo();
+		this.curso = new Curso("01404", 
 				"Tecnologia em Análise e Desenvolvimento de Sistemas", 
 				CursoNivel.Graduacao);
-		disciplina = new Disciplina("TEC.0030", "Teste de Software", 60);
-		professores = new ArrayList<Professor>();
-		professores.add(new Professor());
+		this.disciplina = new Disciplina("TEC.0030", "Teste de Software", 60);
+		this.professores = new ArrayList<Professor>();
+		this.professores.add(new Professor());
 
 	}
 
@@ -83,17 +83,16 @@ public class DistribuicaoTest {
 
 	@Test
 	public void testInstanciaDistribuir() throws CursoSemPeriodoException, DisciplinaSemCursoException{
-		professores.add(new Professor());
-		curso.periodo = periodo;
-//		disciplina.curso = curso;
-		curso.adicionaDisciplina(5, disciplina);
+		this.professores.add(new Professor());
+		this.curso.periodo = this.periodo;
+		this.curso.adicionaDisciplina(5, this.disciplina);
 
-		Distribuicao resultado = Distribuicao.distribuir(periodo, curso, disciplina, professores);
+		Distribuicao resultado = Distribuicao.distribuir(this.periodo, this.curso, this.disciplina, this.professores);
 
-		assertEquals(periodo, resultado.periodo);
-		assertEquals(curso, resultado.curso);
-		assertEquals(disciplina, resultado.disciplina);
-		assertEquals(professores, resultado.professores);
+		assertEquals(this.periodo, resultado.periodo);
+		assertEquals(this.curso, resultado.curso);
+		assertEquals(this.disciplina, resultado.disciplina);
+		assertEquals(this.professores, resultado.professores);
 	}
 
 

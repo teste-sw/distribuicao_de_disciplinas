@@ -34,14 +34,14 @@ public class Distribuicao {
 		if (associacaoValidaEntrePeriodoECurso(periodo, curso))
 			throw new CursoSemPeriodoException("O curso não tem relacionamento com o periodo.");
 		
-		if (associacaoValidaEntreCursoEDisciplina(curso, disciplina))
+		if (associacaoNaoEValidaEntreCursoEDisciplina(curso, disciplina))
 			throw new DisciplinaSemCursoException("A disciplina não tem relacionamento com o curso.");
 
 		return new Distribuicao(periodo, curso, disciplina, professores);
 	}
 
-	private static boolean associacaoValidaEntreCursoEDisciplina(Curso curso, Disciplina disciplina) {
-		return curso.temDisciplina(disciplina);
+	private static boolean associacaoNaoEValidaEntreCursoEDisciplina(Curso curso, Disciplina disciplina) {
+		return !curso.temDisciplina(disciplina);
 	}
 
 	private static boolean parametrosNaoNulos(Periodo periodo, Curso curso, Disciplina disciplina, Collection<Professor> professores) {

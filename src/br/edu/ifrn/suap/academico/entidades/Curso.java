@@ -2,9 +2,6 @@ package br.edu.ifrn.suap.academico.entidades;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class Curso {
 
@@ -32,7 +29,7 @@ public class Curso {
 	}
 
 	public boolean adicionaDisciplina(int periodo, Disciplina disciplina) {
-		if (this.disciplinas.containsKey(disciplina)) return false;
+//		if (this.disciplinas.containsKey(disciplina)) return false;
 		return this.disciplinas.put(disciplina, periodo) == null;
 	}
 
