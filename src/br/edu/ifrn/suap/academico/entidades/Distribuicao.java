@@ -41,7 +41,7 @@ public class Distribuicao {
 	}
 
 	private static boolean associacaoValidaEntreCursoEDisciplina(Curso curso, Disciplina disciplina) {
-		return disciplina.curso == null || !disciplina.curso.equals(curso);
+		return curso.temDisciplina(disciplina);
 	}
 
 	private static boolean parametrosNaoNulos(Periodo periodo, Curso curso, Disciplina disciplina, Collection<Professor> professores) {

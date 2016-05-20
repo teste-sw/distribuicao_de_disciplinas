@@ -21,8 +21,10 @@ public class DistribuicaoTest {
 	@Before
 	public void setup() {
 		periodo = Periodo.abrirNovoPeriodo();
-		curso = new Curso("", "", null);
-		disciplina = new Disciplina("", "", 0);
+		curso = new Curso("01404", 
+				"Tecnologia em Análise e Desenvolvimento de Sistemas", 
+				CursoNivel.Graduacao);
+		disciplina = new Disciplina("TEC.0030", "Teste de Software", 60);
 		professores = new ArrayList<Professor>();
 		professores.add(new Professor());
 
@@ -83,7 +85,8 @@ public class DistribuicaoTest {
 	public void testInstanciaDistribuir() throws CursoSemPeriodoException, DisciplinaSemCursoException{
 		professores.add(new Professor());
 		curso.periodo = periodo;
-		disciplina.curso = curso;
+//		disciplina.curso = curso;
+		curso.adicionaDisciplina(5, disciplina);
 
 		Distribuicao resultado = Distribuicao.distribuir(periodo, curso, disciplina, professores);
 

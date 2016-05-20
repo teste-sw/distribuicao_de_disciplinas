@@ -7,9 +7,6 @@ public class Disciplina {
 		this.titulo = titulo;
 		this.ch = new CargaHoraria(ch);
 	}
-
-	// FIXME no novo modelo, essa propriedade deverá ser removida porque uma disciplina pode estar em diversos cursos
-	public Object curso;
 	
 	public final String codigo;
 	public final String titulo;
