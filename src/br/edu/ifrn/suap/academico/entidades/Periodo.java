@@ -9,13 +9,10 @@ public class Periodo {
 
 	private Collection<Distribuicao> distribuicoes;
 	
-	// FIXME estaAberto deve ser mudado para estado
-	private boolean estaAberto; 
-	
 	private Periodo()
 	{
 		super();
-		this.estaAberto = true;
+		this.estado = PeriodoEstado.AbertoParaDistribuicao;
 	}
 
 	public static Periodo abrirNovoPeriodo() {
@@ -23,10 +20,10 @@ public class Periodo {
 	}
 
 	public boolean estaAbertoParaDistribuicao() {
-		return this.estaAberto;
+		return (this.estado == PeriodoEstado.AbertoParaDistribuicao);
 	}
 
 	public void fecharPeriodoParaDistribuicao() {
-		this.estaAberto = false;
+		this.estado = PeriodoEstado.FechadoParaDistribuicao;
 	}
 }
