@@ -77,14 +77,18 @@ public class DistribuicaoTest {
 
 	@Test(expected=DisciplinaSemCursoException.class)
 	public void testDistribuirDisciplinaRelacionamentoCurso() throws DisciplinaSemCursoException, CursoSemPeriodoException {
-		curso.periodo = periodo;
+		// FIXME parou a implementação porque apareceu novo método
+		this.periodo.adicionarCurso(curso);
+//		curso.periodo = periodo;
 		Distribuicao.distribuir(periodo, curso, disciplina, professores);
 	}
 
 	@Test
 	public void testInstanciaDistribuir() throws CursoSemPeriodoException, DisciplinaSemCursoException{
 		this.professores.add(new Professor());
-		this.curso.periodo = this.periodo;
+		// FIXME parou a implementação porque apareceu novo método
+		this.periodo.adicionarCurso(curso);
+//		this.curso.periodo = this.periodo;
 		this.curso.adicionaDisciplina(5, this.disciplina);
 
 		Distribuicao resultado = Distribuicao.distribuir(this.periodo, this.curso, this.disciplina, this.professores);

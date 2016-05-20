@@ -22,7 +22,7 @@ public class Curso {
 	private Collection<Distribuicao> distribuicoes;
 	
 	// FIXME no novo modelo, periodo deverá sair daqui
-	public Periodo periodo;
+//	public Periodo periodo;
 
 	public boolean temDisciplina(Disciplina disciplina) {
 		return this.disciplinas.containsKey(disciplina);
