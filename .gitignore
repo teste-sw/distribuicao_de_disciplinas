@@ -1,13 +1,50 @@
+
+# bin files #
 *.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.ear
+bin/**
+dist/**
+build/**
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+#general swap/backup files
 hs_err_pid*
-/bin/
+*.so
+*.log
+*.out
+*~
+*.swp
+*.DS_Store
+Thumbs.db
+Desktop.ini
+._*
+.Spotlight-V100
+.Trashes
+*.lock
+
+# NetBeans
+core
+nbbuild/
+nbdist/
+nbproject/*
+nbactions.xml
+nb-configuration.xml
+
+# Eclipse
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.metadata
+.externalToolBuilders/
+*.launch
+.cproject
+.classpath
+.factorypath
+.buildpath
+.target
+.tern-project
+.springBeans
+.recommenders/
