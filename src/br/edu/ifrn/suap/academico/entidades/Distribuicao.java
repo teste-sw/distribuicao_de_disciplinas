@@ -9,4 +9,15 @@ public class Distribuicao {
     public Set<DisciplinaDistribuida> disciplinas;
     public Set<Professor> professores;
     public Set<VersionamentoDeInconformidades> verificacoes;
+	
+	
+	public static Distribuicao buscarPorSemestreAberto(Periodo periodo) throws PeriodoFechadoException{
+		if(periodo.estado == EstadoPeriodo.Passado){
+			throw new PeriodoFechadoException("Periodo "+periodo.valor+"está fechado");
+		}
+		
+		return new Distribuicao();
+	};
+	
+	
 }
