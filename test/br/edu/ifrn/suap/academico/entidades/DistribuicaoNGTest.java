@@ -38,11 +38,21 @@ public class DistribuicaoNGTest {
 		Distribuicao distribuicao_presente = Distribuicao.buscarPorSemestreAberto(periodo_presente);
 		assertTrue(distribuicao_presente.periodo.valor.equals(semestre_presente));
 		assertTrue(distribuicao_presente.periodo.estado.equals(EstadoPeriodo.Presente));
+		/*
+		TODO: Semestre presente
+			Verificar se distribuição feita
+			  - Se cursos, disciplinas, professores e verificações estão instanciados
+		*/  
 		
 		//Testar buscar por semestre com futuro
 		Distribuicao distribuicao_futuro = Distribuicao.buscarPorSemestreAberto(periodo_futuro);
 		assertTrue(distribuicao_futuro.periodo.valor.equals(semestre_futuro));
 		assertTrue(distribuicao_futuro.periodo.estado.equals(EstadoPeriodo.Futuro));
+		/*
+		TODO: Semestre futuro
+			Verificar se distribuição feita
+			  - Se cursos, disciplinas, professores e verificações estão instanciados
+		*/  
 		
 	}
 	
