@@ -13,7 +13,7 @@ import static org.testng.Assert.*;
 
 /**
  *
- * @author joab
+ * @author joab mendes, adoldo melo, pedro rafael
  */
 @Test
 public class DistribuicaoNGTest {
@@ -42,7 +42,12 @@ public class DistribuicaoNGTest {
 		TODO: Semestre presente
 			Verificar se distribuição feita
 			  - Se cursos, disciplinas, professores e verificações estão instanciados
+			assertFalse(distribuicao_presente.cursos.isEmpty());
+			assertFalse(distribuicao_presente.disciplinas.isEmpty());
+			assertFalse(distribuicao_presente.professores.isEmpty());
+			assertFalse(distribuicao_presente.verificacoes.isEmpty());
 		*/  
+		
 		
 		//Testar buscar por semestre com futuro
 		Distribuicao distribuicao_futuro = Distribuicao.buscarPorSemestreAberto(periodo_futuro);
@@ -52,6 +57,10 @@ public class DistribuicaoNGTest {
 		TODO: Semestre futuro
 			Verificar se distribuição feita
 			  - Se cursos, disciplinas, professores e verificações estão instanciados
+			assertFalse(distribuicao_presente.cursos.isEmpty());
+			assertFalse(distribuicao_presente.disciplinas.isEmpty());
+			assertFalse(distribuicao_presente.professores.isEmpty());
+			assertFalse(distribuicao_presente.verificacoes.isEmpty());
 		*/  
 		
 	}
