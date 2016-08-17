@@ -48,3 +48,4 @@ local.properties
 .tern-project
 .springBeans
 .recommenders/
+/target/
